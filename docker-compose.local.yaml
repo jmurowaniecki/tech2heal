@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+
+  app:
+    build:
+      args:
+        user: www-data
+        uid: 1000
+      context: ./
+      dockerfile: ./Dockerfile
+    environment:
+      MONGO_USERNAME: ${DB_USERNAME}
+      MONGO_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - 80:80
+    volumes:
+      - ./:/app
+    working_dir: /app
+    links:
+      - mongo
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${DB_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSWORD}
+
