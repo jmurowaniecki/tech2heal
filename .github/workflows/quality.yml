@@ -25,7 +25,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Python Pylin GitHub Action
+      - name: Executing PyLint using GitHub Action
         uses: fylein/python-pylint-github-action@v1
         with:
           args: pip3 install -r requirements.txt && pylint --rcfile=.pylintrc main models config
