@@ -1,7 +1,8 @@
 # Testing FastAPI
 
-![Python Alpine](https://img.shields.io/badge/Python-3.10.2-646464?style=for-the-badge&logo=python&labelColor=306998&logoColor=FFD43B)
-![FastAPI](https://img.shields.io/badge/FastAPI-v7-306998?style=for-the-badge&logo=fastapi&labelColor=646464&logoColor=FFD43B)
+![Python Alpine](https://img.shields.io/badge/Python-3.9.10-646464?style=for-the-badge&logo=python&labelColor=306998&logoColor=FFD43B)
+![FastAPI](https://img.shields.io/badge/FastAPI-uvicorn-306998?style=for-the-badge&logo=fastapi&labelColor=646464&logoColor=FFD43B)
+
 
 
 # Getting started

@@ -36,6 +36,10 @@ stats: ## Show container status - alias to `docker ps …`.
 clean: ## Remove containers, images and volumes - alias to `docker down …` with increments.
 	$(DOCKER_COMPOSE) down --remove-orphans --rmi all --volumes
 
+deploy: ## Uploads container to Docker Hub
+	@docker build -t lambdadeveloper/tech2heal . -f Dockerfile
+	@docker push lambdadeveloper/tech2heal
+
 : ## \
 
 ssh-%: ## Run SSH into desired service container.
