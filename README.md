@@ -53,8 +53,8 @@ DOCKER_OPTIONAL=Y
 
 See more on
 
-![[Github](https://github.com/jmurowaniecki/tech2heal)](https://img.shields.io/badge/Github-jmurowaniecki/Tech2heal-306998?style=for-the-badge&logo=github&labelColor=646464&logoColor=FFD43B)
-![[Heroku](https://tech2heal.herokuapp.com/)](https://img.shields.io/badge/Heroku-Tech2heal.herokuapp-306998?style=for-the-badge&logo=Heroku&labelColor=646464&logoColor=FFD43B)
-![[Docker Hub](https://tech2heal.Dockerapp.com/)](https://img.shields.io/badge/Docker_Hub-lambdadeveloper/Tech2heal-306998?style=for-the-badge&logo=Docker&labelColor=646464&logoColor=FFD43B)
+[![Github](https://img.shields.io/badge/Github-jmurowaniecki/Tech2heal-306998?style=for-the-badge&logo=github&labelColor=646464&logoColor=FFD43B)](https://github.com/jmurowaniecki/tech2heal)
+[![Heroku](https://img.shields.io/badge/Heroku-Tech2heal.herokuapp-306998?style=for-the-badge&logo=Heroku&labelColor=646464&logoColor=FFD43B)](https://tech2heal.herokuapp.com/)
+[![Docker Hub](https://img.shields.io/badge/Docker_Hub-lambdadeveloper/Tech2heal-306998?style=for-the-badge&logo=Docker&labelColor=646464&logoColor=FFD43B)](https://tech2heal.Dockerapp.com/)
 
 
