@@ -18,7 +18,7 @@ from models.HTTPError import HTTPError
 from models.University import University
 from models.AllowedTypes import AllowedTypes
 
-from lib.database import connect_db
+from config.database import connect_db
 
 app = FastAPI()
 MDB = connect_db()
