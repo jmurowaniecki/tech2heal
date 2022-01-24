@@ -43,3 +43,6 @@ ssh-%: ## Run SSH into desired service container.
 : ## \
 : ## Available containers are `application`, `mongo`, …
 : ## For example use `make ssh-application` to access application console.
+
+killsig:
+	@kill -9 $$(ps aux | grep make | awk '{print($$2);}') > /dev/null

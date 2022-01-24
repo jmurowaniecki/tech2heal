@@ -9,8 +9,14 @@ services:
       context: ./
       dockerfile: ./Dockerfile
     environment:
-      MONGO_USERNAME: ${DB_USERNAME}
-      MONGO_PASSWORD: ${DB_PASSWORD}
+      APP_ENV       : ${APP_ENV}
+      MONGO_USERNAME: ${APP_USERNAME}
+      MONGO_PASSWORD: ${APP_PASSWORD}
+      MONGO_HOSTNAME: ${APP_HOSTNAME}
+      MONGO_DATABASE: ${APP_DATABASE}
+      MONGO_PROTOCOL: ${APP_PROTOCOL}
+    depends_on:
+      - mongo
     ports:
       - 80:80
     volumes:
@@ -18,11 +24,17 @@ services:
     working_dir: /app
     links:
       - mongo
+    networks:
+      - tech2heal
 
   mongo:
     image: mongo
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: ${DB_USERNAME}
-      MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSWORD}
+      MONGO_INITDB_ROOT_USERNAME: ${APP_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${APP_PASSWORD}
+    networks:
+      - tech2heal
 
+networks:
+  tech2heal:
