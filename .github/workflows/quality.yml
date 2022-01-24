@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [ ubuntu-latest ]
         python:
         - 'python-3.9'
         - 'python-3.10'
@@ -24,11 +24,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
-      - name: setup-python ${{ matrix.Python }}
-        uses: ./
-        with:
-          python-version: ${{ matrix.Python }}
 
       - name: Python Pylin GitHub Action
         uses: fylein/python-pylint-github-action@v1
