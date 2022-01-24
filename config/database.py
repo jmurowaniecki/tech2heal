@@ -15,10 +15,10 @@ def connect_db():
         object: MongoDB object.
     """
     client = pymongo.MongoClient("%s://%s:%s@%s/%s?retryWrites=true&w=majority" % (
-        os.environ["MONGO_PROTOCOL"],
-        os.environ["MONGO_USERNAME"],
-        os.environ["MONGO_PASSWORD"],
-        os.environ["MONGO_HOSTNAME"],
-        os.environ["MONGO_DATABASE"],
+        os.environ["APP_PROTOCOL"],
+        os.environ["APP_USERNAME"],
+        os.environ["APP_PASSWORD"],
+        os.environ["APP_HOSTNAME"],
+        os.environ["APP_DATABASE"],
         ))
-    return client[os.environ["MONGO_DATABASE"]]
+    return client[os.environ["APP_DATABASE"]]

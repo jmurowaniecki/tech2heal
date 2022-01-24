@@ -10,11 +10,11 @@ services:
       dockerfile: ./Dockerfile
     environment:
       APP_ENV       : ${APP_ENV}
-      MONGO_USERNAME: ${APP_USERNAME}
-      MONGO_PASSWORD: ${APP_PASSWORD}
-      MONGO_HOSTNAME: ${APP_HOSTNAME}
-      MONGO_DATABASE: ${APP_DATABASE}
-      MONGO_PROTOCOL: ${APP_PROTOCOL}
+      APP_USERNAME: ${APP_USERNAME}
+      APP_PASSWORD: ${APP_PASSWORD}
+      APP_HOSTNAME: ${APP_HOSTNAME}
+      APP_DATABASE: ${APP_DATABASE}
+      APP_PROTOCOL: ${APP_PROTOCOL}
     depends_on:
       - mongo
     ports:
